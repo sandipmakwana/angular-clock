@@ -1,0 +1,25 @@
+.clockarea1{
+    background-color:blueviolet;
+    height:70vh;  
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border:5px solid #ddd;
+}
+
+.dClock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    color:#fff;
+    font-weight: 600;
+    font-size:30px;
+    text-transform: uppercase;
+    padding:30px;
+}
+.dTime{display: flex;}
+.ampm{ font-size:20px; margin-top: 10px;}
+.time{padding: 10px;}

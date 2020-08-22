@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-3">
+        <select class="form-control" id="digital-hr" #digitalHr>
+             <option value="">Hour</option>  
+           <option  *ngFor="let in of counter(12) ;let i = index" value="{{i+1}}">{{i+1}}</option>
+         </select>
+         <span *ngIf="emptyHr != ''">{{emptyHr}}</span>
+       </div>  
+       <div class="col-md-3">
+         <select class="form-control" id="digital-min" #digitalMin>
+             <option value="">Minute</option>  
+           <option  *ngFor="let in of counter(60) ;let i = index" value="{{i}}">{{i}}</option>
+         </select>
+         <span *ngIf="emptyMin != ''">{{emptyMin}}</span>
+       </div>  
+       <div class="col-md-3">
+         <select class="form-control" id="digital-ampm" #digitalAmpm>
+             <option value="">AM/PM</option>  
+           <option  *ngFor="let ampm of ampms" value="{{ampm}}">{{ampm}}</option>
+         </select>
+         <span *ngIf="emptyAmpm != ''">{{emptyAmpm}}</span>
+       </div> 
+       <div class="col-md-3">
+        <button type="button" (click)="onSubmit(digitalHr,digitalMin,digitalAmpm)" name="setanalog" class="btn btn-primary btn-block">Set Time</button>
+      </div>   
+    </div>
+<div class="clockarea1">
+<div class="dClock">
+    <div class="dTime">
+    <div>{{hour}} : &nbsp;</div>
+    <div>{{minute}} :  &nbsp;</div>
+    <div>{{second}} &nbsp;</div>
+    <div class="ampm">{{ampm}}</div>
+    </div>
+</div>
+</div>

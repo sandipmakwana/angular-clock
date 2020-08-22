@@ -1,0 +1,118 @@
+.clockarea2{
+    background-color:peru;
+    height:70vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border:5px solid #ddd;
+}
+
+.aClock{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    border:10px solid #ddd;
+    border-radius: 50%;
+}
+.aClock::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#4d4c4c;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+}
+
+.hr-arrow{
+    width: 5px;
+    height:25%;
+    background: #565c5c;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top:30%;
+    left:calc(50% + -2px);
+    border-radius:100% 100% 0 0;
+}
+
+.min-arrow{
+    width: 3px;
+    height:40%;
+    background: #565c5c;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top:18%;
+    left:calc(50% - 1px);
+    border-radius:100% 100% 0 0;
+}
+.sec-arrow{
+    width:1px;
+    height:50%;
+    background: #018a8f;
+    transform-origin: 50% 80%;
+    position: absolute;
+    top:10%;
+    left:50%;
+    border-radius:100% 100% 0 0;
+}
+
+.count{
+    height: 100%;
+    position:absolute;
+    left:calc(50% - 0.5em);
+}
+.count div{
+    width: 1em;
+    line-height:2em;
+    color:gray;
+    text-align: center;
+    vertical-align: middle;
+}
+.ampm{
+    position: absolute;
+    top: 85%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.c1{ transform: rotate(30deg);}
+.c1 div{ transform: rotate(-30deg);}
+
+.c2{ transform: rotate(60deg);}
+.c2 div{ transform: rotate(-60deg);}
+
+.c3{ transform: rotate(90deg);}
+.c3 div{ transform: rotate(-90deg);}
+
+.c4{ transform: rotate(120deg);}
+.c4 div{ transform: rotate(-120deg);}
+
+.c5{ transform: rotate(150deg);}
+.c5 div{ transform: rotate(-150deg);}
+
+.c6{ transform: rotate(180deg);}
+.c6 div{ transform: rotate(-180deg);}
+
+.c7{ transform: rotate(210deg);}
+.c7 div{ transform: rotate(-210deg);}
+
+.c8{ transform: rotate(240deg);}
+.c8 div{ transform: rotate(-240deg);}
+
+.c9{ transform: rotate(270deg);}
+.c9 div{ transform: rotate(-270deg);}
+
+.c10{ transform: rotate(300deg);}
+.c10 div{ transform: rotate(-300deg);}
+
+.c11{ transform: rotate(330deg);}
+.c11 div{ transform: rotate(-330deg);}
+
+.c12{ transform: rotate(0deg);}
+.c12 div{ transform: rotate(-0deg);}

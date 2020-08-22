@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-3">
+        <select class="form-control" id="analog-hr" #analogHr>
+             <option value="">Hour</option>  
+           <option  *ngFor="let in of counter(12) ;let i = index" value="{{i+1}}">{{i+1}}</option>
+         </select>
+         <span *ngIf="emptyHr != ''">{{emptyHr}}</span>
+       </div>  
+       <div class="col-md-3">
+         <select class="form-control" id="analog-min" #analogMin>
+             <option value="">Minute</option>  
+           <option  *ngFor="let in of counter(60) ;let i = index" value="{{i}}">{{i}}</option>
+         </select>
+         <span *ngIf="emptyMin != ''">{{emptyMin}}</span>
+       </div>  
+       <div class="col-md-3">
+         <select class="form-control" id="analog-ampm" #analogAmpm>
+             <option value="">AM/PM</option>  
+           <option  *ngFor="let ampm of ampms" value="{{ampm}}">{{ampm}}</option>
+         </select>
+         <span *ngIf="emptyAmpm != ''">{{emptyAmpm}}</span>
+       </div> 
+       <div class="col-md-3">
+        <button type="button" (click)="onSubmit(analogHr,analogMin,analogAmpm)" name="setanalog" class="btn btn-primary btn-block">Set Time</button>
+      </div>   
+    </div>
+<div class="clockarea2">
+ <div class="aClock">
+    <div class="count c1"><div>1</div></div>
+    <div class="count c2"><div>2</div></div>
+    <div class="count c3"><div>3</div></div>
+    <div class="count c4"><div>4</div></div>
+    <div class="count c5"><div>5</div></div>
+    <div class="count c6"><div>6</div></div>
+    <div class="count c7"><div>7</div></div>
+    <div class="count c8"><div>8</div></div>
+    <div class="count c9"><div>9</div></div>
+    <div class="count c10"><div>10</div></div>
+    <div class="count c11"><div>11</div></div>
+    <div class="count c12"><div>12</div></div>
+    <div class="hr-arrow" #hrArrow></div>
+    <div class="min-arrow" #minArrow></div>
+    <div class="sec-arrow" #secArrow></div>
+</div>
+<span class="ampm">{{ampm}}</span>
+</div>
